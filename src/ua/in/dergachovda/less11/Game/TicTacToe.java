@@ -11,7 +11,7 @@ public class TicTacToe {
         Board board = new Board();
 
         while (!board.gameFinished()) {
-            System.out.println("Player " + board.currentPlayer + " move...");
+            System.out.println("Player " + board.getCurrentPlayer() + " move...");
             System.out.println("Enter your move: ");
             String move = scanner.next();
             if (!board.makeMove(move))
@@ -19,7 +19,7 @@ public class TicTacToe {
             board.printBoard();
         }
 
-        System.out.println("The winner is " + board.calculateWinner());
+        System.out.println("The winner is " + board.getWinnerPlayer());
 
     }
 
